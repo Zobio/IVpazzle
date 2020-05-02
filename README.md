@@ -1,5 +1,5 @@
 # IVpazzle
-IVpazzleは、マックスレイドバトルで捕獲した2Vまたは3Vのポケモンの個体値を入力すると、その日付で連続個体値が割り出せるかを判断してくれます。また、連続個体値の位置も表示します。
+IVpazzleは、マックスレイドバトルで捕獲した2Vまたは3Vのポケモンの個体値を入力すると、その日付で連続個体値が割り出せるかを判断してくれるプログラムです。また、連続個体値の位置も表示します。
 
 ### 使い方
 IVpazzleを保存したディレクトリまで移動し、「Java IVpazzle」と入力してください。(JDKをDLしていない場合はDLしてください。)
@@ -15,4 +15,4 @@ IVpazzleを保存したディレクトリまで移動し、「Java IVpazzle」�
 また、「なんらかの問題が発生しました。」と出た場合は、GitHubでその時入力した個体値を教えていただけると助かります。
 
 ### 連続個体値がわかったら
-xoroshiro-inverse(https://github.com/pattirudon/xoroshiro-inverse)などに使ってください
+xoroshiro-inverse(https://github.com/pattirudon/xoroshiro-inverse) などに使ってください
