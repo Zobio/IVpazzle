@@ -1,9 +1,11 @@
 import java.util.*;
+import java.io.*;
+import java.nio.*;
 
 public class IVpazzle{
   public static void main(String[] args) {
   int[] IV = new int[6];
-  System.out.printf(" IVpazzle ver%1.1f%n ", 1.1);
+  System.out.printf(" IVpazzle ver%1.1f%n ", 1.2);
   System.out.println("注:自然Vが発生している個体値はサポートされていません");
   System.out.println();
   System.out.println(" 2Vまたは3Vのポケモンの個体値を入力してください(例:x x x x x x)");
@@ -408,16 +410,19 @@ public class IVpazzle{
   if ((IV[5] == 33))
   System.out.print("[" + secondVcount + "V個体のS] ");
   System.out.println("の5つの個体値が連続個体値です。");
+  Crash();
   System.exit(0);
 }else{
   if ((secondVcount == 5) || (((IV[0] > 32) || (IV[1] > 32) || (IV[2] > 32) || (IV[3] > 32) || (IV[4] > 32) || (IV[5] > 32))
   && (!(IV[0] == 32) && !(IV[1] == 32) && !(IV[2] == 32) && !(IV[3] == 32) && !(IV[4] == 32) && !(IV[5] == 32)))){
   System.out.println("連続個体値を得られませんでした。");
+  faleCounter();
   System.exit(0);
 }
 else if (((firstNotV.equals(Hst)) && (IV[0] > 31)) || ((firstNotV.equals(Ast)) && (IV[1] > 31)) || ((firstNotV.equals(Bst)) && (IV[2] > 31)) ||
         ((firstNotV.equals(Cst)) && (IV[3] > 31)) || ((firstNotV.equals(Dst)) && (IV[4] > 31)) || ((firstNotV.equals(Sst)) && (IV[5] > 31))){
   System.out.println("再計算回数が多すぎるため、連続個体値が得られているか判定できません");
+  faleCounter();
   System.exit(0);
 }else{
   H = IV[0]; A = IV[1]; B = IV[2]; C = IV[3]; D = IV[4]; S = IV[5];
@@ -867,16 +872,19 @@ else if (((firstNotV.equals(Hst)) && (IV[0] > 31)) || ((firstNotV.equals(Ast)) &
   if ((IV[5] == 33))
   System.out.print("[" + thirdVcount + "V個体のS] ");
   System.out.println("の5つの個体値が連続個体値です。");
+  Crash();
   System.exit(0);
 }else{
   if ((thirdVcount == 5) || (((IV[0] > 32) || (IV[1] > 32) || (IV[2] > 32) || (IV[3] > 32) || (IV[4] > 32) || (IV[5] > 32))
   && (!(IV[0] == 32) && !(IV[1] == 32) && !(IV[2] == 32) && !(IV[3] == 32) && !(IV[4] == 32) && !(IV[5] == 32)))){
   System.out.println("連続個体値を得られませんでした");
+  faleCounter();
   System.exit(0);
 }
 else if (((firstNotV.equals(Hst)) && (IV[0] > 31)) || ((firstNotV.equals(Ast)) && (IV[1] > 31)) || ((firstNotV.equals(Bst)) && (IV[2] > 31)) ||
         ((firstNotV.equals(Cst)) && (IV[3] > 31)) || ((firstNotV.equals(Dst)) && (IV[4] > 31)) || ((firstNotV.equals(Sst)) && (IV[5] > 31))){
 System.out.println("再計算回数が多すぎるため、連続個体値が得られているか判定できません");
+faleCounter();
 System.exit(0);
 }else{
   H = IV[0]; A = IV[1]; B = IV[2]; C = IV[3]; D = IV[4]; S = IV[5];
@@ -1326,16 +1334,19 @@ else if (!(D == 31) && ((D % 8 == 6) || (D % 8 == 7))){
   if ((IV[5] == 33))
   System.out.print("[" + forceVcount + "V個体のS] ");
   System.out.println("の5つの個体値が連続個体値です。");
+  Crash();
   System.exit(0);
 }else{
   if ((forceVcount == 5) || (((IV[0] > 32) || (IV[1] > 32) || (IV[2] > 32) || (IV[3] > 32) || (IV[4] > 32) || (IV[5] > 32))
   && (!(IV[0] == 32) && !(IV[1] == 32) && !(IV[2] == 32) && !(IV[3] == 32) && !(IV[4] == 32) && !(IV[5] == 32)))){
   System.out.println("連続個体値を得られませんでした");
+  faleCounter();
   System.exit(0);
 }
 else if (((firstNotV.equals(Hst)) && (IV[0] > 31)) || ((firstNotV.equals(Ast)) && (IV[1] > 31)) || ((firstNotV.equals(Bst)) && (IV[2] > 31)) ||
         ((firstNotV.equals(Cst)) && (IV[3] > 31)) || ((firstNotV.equals(Dst)) && (IV[4] > 31)) || ((firstNotV.equals(Sst)) && (IV[5] > 31))){
 System.out.println("再計算回数が多すぎるため、連続個体値が得られているか判定できません");
+faleCounter();
 System.exit(0);
 }else{
   H = IV[0]; A = IV[1]; B = IV[2]; C = IV[3]; D = IV[4]; S = IV[5];
@@ -1786,17 +1797,20 @@ else if (!(D == 31) && ((D % 8 == 6) || (D % 8 == 7))){
   if ((IV[5] == 33))
   System.out.print("[" + fifthVcount + "V個体のS] ");
   System.out.println("の5つの個体値が連続個体値です。");
+  Crash();
   System.exit(0);
 }else{
   if ((fifthVcount == 5) || (((IV[0] > 32) || (IV[1] > 32) || (IV[2] > 32) || (IV[3] > 32) || (IV[4] > 32) || (IV[5] > 32))
   && (!(IV[0] == 32) && !(IV[1] == 32) && !(IV[2] == 32) && !(IV[3] == 32) && !(IV[4] == 32) && !(IV[5] == 32)))){
   System.out.println("連続個体値を得られませんでした");
+  faleCounter();
   System.exit(0);
 }
 else if ((((firstNotV.equals(Hst)) && (IV[0] > 31)) || ((firstNotV.equals(Ast)) && (IV[1] > 31)) || ((firstNotV.equals(Bst)) && (IV[2] > 31)) ||
         ((firstNotV.equals(Cst)) && (IV[3] > 31)) || ((firstNotV.equals(Dst)) && (IV[4] > 31)) || ((firstNotV.equals(Sst)) && (IV[5] > 31)))
         || ((IV[0] >= 31) && (IV[1] >= 31) && (IV[2] >= 31) && (IV[3] >= 31) && (IV[4] >= 31) && (IV[5] >= 31))){
 System.out.println("再計算回数が多すぎるため、連続個体値が得られているか判定できません");
+faleCounter();
 System.exit(0);
 }else{
   H = IV[0]; A = IV[1]; B = IV[2]; C = IV[3]; D = IV[4]; S = IV[5];
@@ -2247,17 +2261,20 @@ else if (!(D == 31) && ((D % 8 == 6) || (D % 8 == 7))){
   if ((IV[5] == 33))
   System.out.print("[" + sixthVcount + "V個体のS] ");
   System.out.println("の5つの個体値が連続個体値です。");
+  Crash();
   System.exit(0);
 }else{
   if ((sixthVcount == 5) || (((IV[0] > 32) || (IV[1] > 32) || (IV[2] > 32) || (IV[3] > 32) || (IV[4] > 32) || (IV[5] > 32))
   && (!(IV[0] == 32) && !(IV[1] == 32) && !(IV[2] == 32) && !(IV[3] == 32) && !(IV[4] == 32) && !(IV[5] == 32)))){
   System.out.println("連続個体値を得られませんでした");
+  faleCounter();
   System.exit(0);
 }
 else if ((((firstNotV.equals(Hst)) && (IV[0] > 31)) || ((firstNotV.equals(Ast)) && (IV[1] > 31)) || ((firstNotV.equals(Bst)) && (IV[2] > 31)) ||
         ((firstNotV.equals(Cst)) && (IV[3] > 31)) || ((firstNotV.equals(Dst)) && (IV[4] > 31)) || ((firstNotV.equals(Sst)) && (IV[5] > 31)))
         || ((IV[0] >= 31) && (IV[1] >= 31) && (IV[2] >= 31) && (IV[3] >= 31) && (IV[4] >= 31) && (IV[5] >= 31))){
 System.out.println("再計算回数が多すぎるため、連続個体値が得られているか判定できません");
+faleCounter();
 System.exit(0);
 }else{
   H = IV[0]; A = IV[1]; B = IV[2]; C = IV[3]; D = IV[4]; S = IV[5];
@@ -2708,17 +2725,20 @@ else if (!(D == 31) && ((D % 8 == 6) || (D % 8 == 7))){
   if ((IV[5] == 33))
   System.out.print("[" + seventhVcount + "V個体のS] ");
   System.out.println("の5つの個体値が連続個体値です。");
+  Crash();
   System.exit(0);
 }else{
   if ((seventhVcount == 5) || (((IV[0] > 32) || (IV[1] > 32) || (IV[2] > 32) || (IV[3] > 32) || (IV[4] > 32) || (IV[5] > 32))
   && (!(IV[0] == 32) && !(IV[1] == 32) && !(IV[2] == 32) && !(IV[3] == 32) && !(IV[4] == 32) && !(IV[5] == 32)))){
   System.out.println("連続個体値を得られませんでした");
+  faleCounter();
   System.exit(0);
 }
 else if ((((firstNotV.equals(Hst)) && (IV[0] > 31)) || ((firstNotV.equals(Ast)) && (IV[1] > 31)) || ((firstNotV.equals(Bst)) && (IV[2] > 31)) ||
         ((firstNotV.equals(Cst)) && (IV[3] > 31)) || ((firstNotV.equals(Dst)) && (IV[4] > 31)) || ((firstNotV.equals(Sst)) && (IV[5] > 31)))
         || ((IV[0] >= 31) && (IV[1] >= 31) && (IV[2] >= 31) && (IV[3] >= 31) && (IV[4] >= 31) && (IV[5] >= 31))){
 System.out.println("再計算回数が多すぎるため、連続個体値が得られているか判定できません");
+faleCounter();
 System.exit(0);
 }else{
   System.out.println("なんらかの問題が発生しました。");
@@ -2945,4 +2965,49 @@ System.exit(0);
   return IV;
 }
 
+public static void faleCounter() {
+  try{
+    File file = new File("FaleCount.txt");
+    file.createNewFile();
+    BufferedReader br = new BufferedReader(new FileReader(file));
+  
+    String str = br.readLine();
+    if (str == null){
+      str = "0";
+    }
+      int count = Integer.parseInt(str);
+    int faleCount = count + 1;
+    System.out.println("失敗回数:" + faleCount);
+    System.out.print("");
+      Write(faleCount);
+      br.close();
+  }catch(FileNotFoundException e){
+    System.out.println(e);
+  }catch(IOException e){
+    System.out.println(e);
+      }
+    }
+
+    	
+	public static void Write (int faleCount) {
+    try{
+	File file = new File("FaleCount.txt");
+	file.delete();
+	file.createNewFile();
+	PrintWriter pw = new PrintWriter(new FileWriter(file));
+	String StringFale = String.valueOf(faleCount);
+	pw.write(StringFale);
+	pw.flush();
+  pw.close();
+    }catch(FileNotFoundException e){
+      System.out.println(e);
+    }catch(IOException e){
+      System.out.println(e);
+        }
+	}
+
+	public static void Crash() {
+		File file = new File("FaleCount.txt");
+		file.delete();
+    }
 }
