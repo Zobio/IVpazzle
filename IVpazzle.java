@@ -5,7 +5,7 @@ import java.nio.*;
 public class IVpazzle{
   public static void main(String[] args) {
   int[] IV = new int[6];
-  System.out.printf(" IVpazzle ver%1.1f%n ", 1.2);
+  System.out.printf(" IVpazzle ver%1.1f%n ", 1.3);
   System.out.println("注:自然Vが発生している個体値はサポートされていません");
   System.out.println();
   System.out.println(" 2Vまたは3Vのポケモンの個体値を入力してください(例:x x x x x x)");
@@ -378,8 +378,8 @@ public class IVpazzle{
   String Dst = "D";
   String Sst = "S";
 
-  if ((((firstVcount == 2) && (unknownCount == 1) && ((IV[0] == 32) || (IV[1] == 32) || (IV[2] == 32) || (IV[3] == 32) || (IV[4] == 32) || (IV[5] == 32)))
-   || ((firstVcount == 3) && (unknownCount == 2) && ((IV[0] == 32) || (IV[1] == 32) || (IV[2] == 32) || (IV[3] == 32) || (IV[4] == 32) || (IV[5] == 32))
+  if ((((firstVcount == 2) && (unknownCount >= 1) && ((IV[0] == 32) || (IV[1] == 32) || (IV[2] == 32) || (IV[3] == 32) || (IV[4] == 32) || (IV[5] == 32)))
+   || ((firstVcount == 3) && (unknownCount >= 2) && ((IV[0] == 32) || (IV[1] == 32) || (IV[2] == 32) || (IV[3] == 32) || (IV[4] == 32) || (IV[5] == 32))
    && ((IV[0] == 33) || (IV[1] == 33) || (IV[2] == 33) || (IV[3] == 33) || (IV[4] == 33) || (IV[5] == 33)))) && (firstVcount < secondVcount)){
   System.out.println("連続個体値を得られました。");
   for (int f = 0; f < notV.size(); f++){
@@ -840,8 +840,8 @@ else if (((firstNotV.equals(Hst)) && (IV[0] > 31)) || ((firstNotV.equals(Ast)) &
   else if(lastNotV3num == 0)
   lastNotV3 = IV[0];
 
-  if ((((firstVcount == 2) && (unknownCount == 1) && ((IV[0] == 32) || (IV[1] == 32) || (IV[2] == 32) || (IV[3] == 32) || (IV[4] == 32) || (IV[5] == 32)))
-   || ((firstVcount == 3) && (unknownCount == 2) && ((IV[0] == 32) || (IV[1] == 32) || (IV[2] == 32) || (IV[3] == 32) || (IV[4] == 32) || (IV[5] == 32))
+  if ((((firstVcount == 2) && (unknownCount >= 1) && ((IV[0] == 32) || (IV[1] == 32) || (IV[2] == 32) || (IV[3] == 32) || (IV[4] == 32) || (IV[5] == 32)))
+   || ((firstVcount == 3) && (unknownCount >= 2) && ((IV[0] == 32) || (IV[1] == 32) || (IV[2] == 32) || (IV[3] == 32) || (IV[4] == 32) || (IV[5] == 32))
    && ((IV[0] == 33) || (IV[1] == 33) || (IV[2] == 33) || (IV[3] == 33) || (IV[4] == 33) || (IV[5] == 33)))) && (secondVcount < thirdVcount)){
   System.out.println("連続個体値を得られました。");
   for (int f = 0; f < notV.size(); f++){
@@ -1302,8 +1302,8 @@ else if (!(D == 31) && ((D % 8 == 6) || (D % 8 == 7))){
   else if(lastNotV4num == 0)
   lastNotV4 = IV[0];
 
-  if ((((firstVcount == 2) && (unknownCount == 1) && ((IV[0] == 32) || (IV[1] == 32) || (IV[2] == 32) || (IV[3] == 32) || (IV[4] == 32) || (IV[5] == 32)))
-   || ((firstVcount == 3) && (unknownCount == 2) && ((IV[0] == 32) || (IV[1] == 32) || (IV[2] == 32) || (IV[3] == 32) || (IV[4] == 32) || (IV[5] == 32))
+  if ((((firstVcount == 2) && (unknownCount >= 1) && ((IV[0] == 32) || (IV[1] == 32) || (IV[2] == 32) || (IV[3] == 32) || (IV[4] == 32) || (IV[5] == 32)))
+   || ((firstVcount == 3) && (unknownCount >= 2) && ((IV[0] == 32) || (IV[1] == 32) || (IV[2] == 32) || (IV[3] == 32) || (IV[4] == 32) || (IV[5] == 32))
    && ((IV[0] == 33) || (IV[1] == 33) || (IV[2] == 33) || (IV[3] == 33) || (IV[4] == 33) || (IV[5] == 33)))) && (thirdVcount < forceVcount)){
   System.out.println("連続個体値を得られました。");
   for (int f = 0; f < notV.size(); f++){
@@ -1765,8 +1765,8 @@ else if (!(D == 31) && ((D % 8 == 6) || (D % 8 == 7))){
   else if(lastNotV5num == 0)
   lastNotV5 = IV[0];
 
-  if ((((firstVcount == 2) && (unknownCount == 1) && ((IV[0] == 32) || (IV[1] == 32) || (IV[2] == 32) || (IV[3] == 32) || (IV[4] == 32) || (IV[5] == 32)))
-   || ((firstVcount == 3) && (unknownCount == 2) && ((IV[0] == 32) || (IV[1] == 32) || (IV[2] == 32) || (IV[3] == 32) || (IV[4] == 32) || (IV[5] == 32))
+  if ((((firstVcount == 2) && (unknownCount >= 1) && ((IV[0] == 32) || (IV[1] == 32) || (IV[2] == 32) || (IV[3] == 32) || (IV[4] == 32) || (IV[5] == 32)))
+   || ((firstVcount == 3) && (unknownCount >= 2) && ((IV[0] == 32) || (IV[1] == 32) || (IV[2] == 32) || (IV[3] == 32) || (IV[4] == 32) || (IV[5] == 32))
    && ((IV[0] == 33) || (IV[1] == 33) || (IV[2] == 33) || (IV[3] == 33) || (IV[4] == 33) || (IV[5] == 33)))) && (forceVcount < fifthVcount)){
   System.out.println("連続個体値を得られました。");
   for (int f = 0; f < notV.size(); f++){
@@ -2229,8 +2229,8 @@ else if (!(D == 31) && ((D % 8 == 6) || (D % 8 == 7))){
   else if(lastNotV6num == 0)
   lastNotV6 = IV[0];
 
-  if ((((firstVcount == 2) && (unknownCount == 1) && ((IV[0] == 32) || (IV[1] == 32) || (IV[2] == 32) || (IV[3] == 32) || (IV[4] == 32) || (IV[5] == 32)))
-   || ((firstVcount == 3) && (unknownCount == 2) && ((IV[0] == 32) || (IV[1] == 32) || (IV[2] == 32) || (IV[3] == 32) || (IV[4] == 32) || (IV[5] == 32))
+  if ((((firstVcount == 2) && (unknownCount >= 1) && ((IV[0] == 32) || (IV[1] == 32) || (IV[2] == 32) || (IV[3] == 32) || (IV[4] == 32) || (IV[5] == 32)))
+   || ((firstVcount == 3) && (unknownCount >= 2) && ((IV[0] == 32) || (IV[1] == 32) || (IV[2] == 32) || (IV[3] == 32) || (IV[4] == 32) || (IV[5] == 32))
    && ((IV[0] == 33) || (IV[1] == 33) || (IV[2] == 33) || (IV[3] == 33) || (IV[4] == 33) || (IV[5] == 33)))) && (fifthVcount < sixthVcount)){
   System.out.println("連続個体値を得られました。");
   for (int f = 0; f < notV.size(); f++){
